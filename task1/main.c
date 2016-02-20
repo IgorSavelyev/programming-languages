@@ -24,12 +24,14 @@ int main(int argc, const char *argv[])
 
     size_t x1, x2, y1, y2;
     do {
-        scanf("%lu%lu%lu%lu", &x1, &y1, &x2, &y2);
+        scanf("%lu", &x1);
 
         if (x1) {
+            scanf("%lu%lu%lu", &y1, &x2, &y2);
+
             for (size_t i = x1 - 1; i < x2; i++) {
                 for (size_t j = y1 - 1; j < y2; j++) {
-                    printf("%lu ", table[i][j]);
+                    printf("%9lu ", table[i][j]);
                 }
                 printf("\n");
             }
